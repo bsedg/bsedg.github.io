@@ -18,6 +18,12 @@
   </url>
   
   <url>
+    <loc>https://bsedg.github.io/categories/getting-started/</loc>
+    <lastmod>2017-04-03T19:13:42-04:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>https://bsedg.github.io/tags/golang/</loc>
     <lastmod>2017-04-03T19:13:42-04:00</lastmod>
     <priority>0</priority>
