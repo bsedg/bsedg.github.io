@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Sedgwick Tech Blog</title>
+    <link>https://bsedg.github.io/index.xml</link>
+    <description>Recent content on Sedgwick Tech Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>Copyright (c) 2017, Brandon Sedgwick.</copyright>
+    <lastBuildDate>Sun, 02 Apr 2017 13:43:14 -0400</lastBuildDate>
+    <atom:link href="https://bsedg.github.io/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>intro</title>
+      <link>https://bsedg.github.io/2017/04/intro</link>
+      <pubDate>Sun, 02 Apr 2017 13:43:14 -0400</pubDate>
+      
+      <guid>https://bsedg.github.io/2017/04/intro</guid>
+      <description>
+
+&lt;h1 id=&#34;introduction&#34;&gt;Introduction&lt;/h1&gt;
+
+&lt;p&gt;Hello, world!&lt;/p&gt;
+
+&lt;p&gt;One of the simpler introductory hello world implementations is with Docker.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;docker run hello-world
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;See more at &lt;a href=&#34;https://docs.docker.com/engine/getstarted/step_one/#step-3-verify-your-installation&#34;&gt;https://docs.docker.com/engine/getstarted/step_one/#step-3-verify-your-installation&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Then with Go, the introductory code looks like the following.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;package main
+
+import &amp;quot;fmt&amp;quot;
+
+func main() {
+  fmt.Println(&amp;quot;Hello, world!&amp;quot;)
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Assuming that code exists in a file &lt;code&gt;main.go&lt;/code&gt;, you would then just need to do:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;go run main.go
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Or, just go to &lt;a href=&#34;https://play.golang.org&#34;&gt;https://play.golang.org&lt;/a&gt; to test it out in the browser.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>continuous delivery</title>
+      <link>https://bsedg.github.io/2017/04/continuous-delivery</link>
+      <pubDate>Sun, 02 Apr 2017 00:02:51 -0400</pubDate>
+      
+      <guid>https://bsedg.github.io/2017/04/continuous-delivery</guid>
+      <description>
+
+&lt;h1 id=&#34;continuous-delivery&#34;&gt;Continuous Delivery&lt;/h1&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>
