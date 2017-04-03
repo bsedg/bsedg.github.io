@@ -2,24 +2,42 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>https://bsedg.github.io/2017/04/intro</loc>
-    <lastmod>2017-04-02T13:43:14-04:00</lastmod>
+    <loc>https://bsedg.github.io/posts/2017/04/hello-world/</loc>
+    <lastmod>2017-04-03T19:13:42-04:00</lastmod>
   </url>
   
   <url>
-    <loc>https://bsedg.github.io/2017/04/continuous-delivery</loc>
-    <lastmod>2017-04-02T00:02:51-04:00</lastmod>
+    <loc>https://bsedg.github.io/categories/</loc>
+    <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://bsedg.github.io/post/</loc>
-    <lastmod>2017-04-02T13:43:14-04:00</lastmod>
+    <loc>https://bsedg.github.io/tags/docker/</loc>
+    <lastmod>2017-04-03T19:13:42-04:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://bsedg.github.io/tags/golang/</loc>
+    <lastmod>2017-04-03T19:13:42-04:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://bsedg.github.io/posts/</loc>
+    <lastmod>2017-04-03T19:13:42-04:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>https://bsedg.github.io/</loc>
-    <lastmod>2017-04-02T13:43:14-04:00</lastmod>
+    <lastmod>2017-04-03T19:13:42-04:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://bsedg.github.io/tags/</loc>
+    <lastmod>2017-04-03T19:13:42-04:00</lastmod>
     <priority>0</priority>
   </url>
   
