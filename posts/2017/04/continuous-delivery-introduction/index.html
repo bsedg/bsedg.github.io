@@ -1,0 +1,247 @@
+<div class="single">
+  <!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="generator" content="Hugo 0.20-DEV" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+    <link rel='stylesheet' href='//fonts.googleapis.com/css?family=Open+Sans|Marcellus+SC'>
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.4/styles/solarized_dark.min.css">
+    <link rel="stylesheet" href="https://bsedg.github.io/css/styles.css">
+    <link rel="stylesheet" href="https://bsedg.github.io/css/custom.css">
+    <link rel="alternate" type="application/rss+xml" title="RSS" href="https://bsedg.github.io//index.xml">
+
+    
+    <title>Continuous Delivery Introduction - Sedgwick Tech Blog</title>
+    <meta property='og:title' content="Continuous Delivery Introduction - Sedgwick Tech Blog">
+    <meta property="og:type" content="article">
+    
+
+    <meta property="og:url" content="https://bsedg.github.io/posts/2017/04/continuous-delivery-introduction/">
+    
+    
+
+  </head>
+
+  <body>
+
+    <header class="site">
+      <div class="title"><a href="https://bsedg.github.io/">Sedgwick Tech Blog</a></div>
+    </header>
+
+    <div class="container site">
+
+
+
+  <div class="row">
+    <div class="col-sm-9">
+
+      <article class="single" itemscope="itemscope" itemtype="http://schema.org/Article">
+
+        <meta itemprop="mainEntityOfPage"  itemType="https://schema.org/WebPage" content="https://bsedg.github.io/"/>
+        <meta itemprop="dateModified" content="2017-04-03T20:09:27-04:00">
+        <meta itemprop="headline" content="Continuous Delivery Introduction">
+        <meta itemprop="description" content="Overview
+
+Continuous delivery along with continuous integration supports the key fundamentals of software development using the agile methodology.
+
+">
+        <meta itemprop="url" content="https://bsedg.github.io/posts/2017/04/continuous-delivery-introduction/">
+        <div itemprop="image" itemscope itemtype="https://schema.org/ImageObject">
+          <meta itemprop="url" content="https://bsedg.github.io/images/default.jpg" />
+          <meta itemprop="width" content="800">
+          <meta itemprop="height" content="800">
+        </div>
+        <div itemprop="publisher" itemscope itemtype="https://schema.org/Organization">
+          <div itemprop="logo" itemscope itemtype="https://schema.org/ImageObject">
+            <meta itemprop="url" content="https://bsedg.github.io/images/logo.jpg">
+            <meta itemprop="width" content="100">
+            <meta itemprop="height" content="100">
+          </div>
+          <meta itemprop="name" content="Sedgwick Tech Blog">
+        </div>
+        <div itemprop="author" itemscope itemtype="https://schema.org/Person">
+          <meta itemprop="name" content="Brandon Sedgwick">
+        </div>
+
+        <div class="image" style="background-image: url(https://bsedg.github.io/images/default.jpg);"></div>
+
+        <header class="article-header">
+          <time itemprop="datePublished" pubdate="pubdate" datetime="2017-04-03T20:09:27-04:00">Mon, Apr 3, 2017</time>
+          <h1 class="article-title">Continuous Delivery Introduction</h1>
+          <sub>About 3 minute read</sub>
+        </header>
+
+        <div class="article-body" itemprop="articleBody">
+          <h1 id="overview">Overview</h1>
+
+<p>Continuous delivery along with continuous integration supports the key fundamentals of software development using the agile methodology.</p>
+
+<p></p>
+
+<p>Continuous delivery is the ability to produce new software to the end user at any time. Although different from continuous deployment to always be deploying any new code, continuous allows for deploying at any time, which may be at business defined intervals.</p>
+
+<h2 id="related-to-the-agile-manifesto">Related to the Agile Manifesto</h2>
+
+<p>From <a href="http://agilemanifesto.org">http://agilemanifesto.org</a>, continuous delivery is the first principle of the agile manifesto being labeled as the &ldquo;highest priority&rdquo;.</p>
+
+<blockquote>
+<p>Our highest priority is to satisfy the customer through early and continuous delivery of valuable software.</p>
+</blockquote>
+
+<p>Very closely to that principle is deliverying working software in shorter timescales, which is enabled by the ability of continuous delivery.</p>
+
+<blockquote>
+<p>Deliver working software frequently, from a couple of weeks to a couple of months, with a preference to the shorter timescale.</p>
+</blockquote>
+
+<p>Both above principles are addressed with the concept of continuous delivery. Although continuous delivery is typically imagined to be continuous deploying new software to a user, delivery only refers to allowing for a deployment to occur. Deploying new versions to a production environment may be gated for business reasons, but that version can be made available at any time. See also <a href="https://continuousdelivery.com/2010/08/continuous-delivery-vs-continuous-deployment/">https://continuousdelivery.com/2010/08/continuous-delivery-vs-continuous-deployment/</a>.</p>
+
+<p>Hand in hand with continuous delivery, continuous integration helps ensure the software we are delivering to be consistent quality. The folowing agil manifesto principle is reinforced by continuous integration.</p>
+
+<blockquote>
+<p>Continuous attention to technical excellence and good design enhances agility.</p>
+</blockquote>
+
+<p>Continuous integration can be broken down to being continually integrating your code with the main branches in the code base, other services that are depended upon, backing services like databases and queues, and many forms of testing. Testing should be done with unit testing, integration testing, stress testing, functional testing, etc. Software should be written with tests as first class citizens, where you use a test first approach.</p>
+
+<h2 id="sample-development-flow">Sample development flow</h2>
+
+<p>In an ideal development experience of software development with continuous integration, delivery:</p>
+
+<ol>
+<li>Tests added, source code changes, pushed up to branch in version control</li>
+<li>Build is initiated from the code push (i.e. a hook), tests are run with unit tests first</li>
+<li>Artifacts saved, deployed to an initial dev environment</li>
+<li>Further testing like integration testing environment by environment</li>
+<li>Delivered to the user</li>
+</ol>
+
+<h2 id="tools">Tools</h2>
+
+<p>For simple setup of a project, there are ready to go hosted solutions that can get a developer up and going with parts of continuous delivery in little time and effort.</p>
+
+<ol>
+<li>Travis-CI <a href="https://travis-ci.org">travis-ci.org</a></li>
+<li>Codeship <a href="https://codeship.com">codeship.com</a></li>
+<li>CircleCI <a href="https://circleci.com">circleci.com</a></li>
+<li>Wercker <a href="https://wercker.com">wercker.com</a></li>
+<li>Drone.io <a href="https://try.drone.io">drone.io</a></li>
+<li>Shippable <a href="https://www.shippable.com">shippable.com</a></li>
+</ol>
+
+<p>Other solutions are more tightly integrated into a particular platform, like where the code repositories are hosted or where the deployments are delivered.</p>
+
+<ol>
+<li>Gitlab <a href="https://about.gitlab.com">gitlab.com</a></li>
+<li>Bamboo by Atlassian <a href="https://www.atlassian.com/software/bamboo">atlassian.com</a></li>
+<li>Domino Data Lab <a href="https://www.dominodatalab.com/">dominodatalab.com</a> Data Science platform</li>
+<li>Google Cloud Platform <a href="https://cloud.google.com">cloud.google.com</a></li>
+<li>AWS Code Pipeline <a href="https://aws.amazon.com/codepipeline">AWS codepipeline</a></li>
+</ol>
+
+<p>Then a couple to point out that are nice, complete solutions with good flexibility.</p>
+
+<ol>
+<li>Visual Studio Team Services <a href="https://www.visualstudio.com/team-services/">visualstudio.com</a></li>
+<li>Jenkins <a href="https://jenkins.io/">jenkins.io</a></li>
+</ol>
+
+<p>These are obviously not exhaustive lists. There are for more solutions and tools, but these are good starting points to learn how they work with your unique code bases and products.</p>
+        </div>
+
+
+        <aside>
+          <div class="section"><a href="https://bsedg.github.io/tags/agile" class="tag">agile</a> </div>
+
+          <div class="section share">
+            <a href="http://www.facebook.com/sharer.php?src=bm&u=https%3a%2f%2fbsedg.github.io%2fposts%2f2017%2f04%2fcontinuous-delivery-introduction%2f&t=Continuous%20Delivery%20Introduction" onclick="window.open(this.href, 'PCwindow', 'width=550, height=350, menubar=no, toolbar=no, scrollbars=yes'); return false;"><i class="fa fa-facebook"></i></a>
+            <a href="http://twitter.com/intent/tweet?url=https%3a%2f%2fbsedg.github.io%2fposts%2f2017%2f04%2fcontinuous-delivery-introduction%2f&text=Continuous%20Delivery%20Introduction&tw_p=tweetbutton" onclick="window.open(this.href, 'PCwindow', 'width=550, height=350, menubar=no, toolbar=no, scrollbars=yes'); return false;"><i class="fa fa-twitter"></i></a>
+            <a href="https://plus.google.com/share?url=https%3a%2f%2fbsedg.github.io%2fposts%2f2017%2f04%2fcontinuous-delivery-introduction%2f" onclick="window.open(this.href, 'PCwindow', 'width=550, height=350, menubar=no, toolbar=no, scrollbars=yes'); return false;"><i class="fa fa-google-plus"></i></a>
+            <a href="http://getpocket.com/edit?url=https%3a%2f%2fbsedg.github.io%2fposts%2f2017%2f04%2fcontinuous-delivery-introduction%2f&title=Continuous%20Delivery%20Introduction" onclick="window.open(this.href, 'PCwindow', 'width=550, height=350, menubar=no, toolbar=no, scrollbars=yes'); return false;"><i class="fa fa-get-pocket"></i></a>
+          </div>
+
+          
+          
+          <div id="disqus_thread"></div>
+          <script type="text/javascript">
+(function() {
+  var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+  var disqus_shortname = 'bsedg';
+  dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+  (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+})();
+          </script>
+          <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+          <a href="http://disqus.com/" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+          
+          
+        </aside>
+
+      </article>
+    </div>
+
+    <div class="col-sm-3">
+      <aside class="site">
+
+  
+  <div class="section">
+    <header><div class="title">TableOfContents</div></header>
+    <div class="list-default"><nav id="TableOfContents">
+<ul>
+<li><a href="#overview">Overview</a>
+<ul>
+<li><a href="#related-to-the-agile-manifesto">Related to the Agile Manifesto</a></li>
+<li><a href="#sample-development-flow">Sample development flow</a></li>
+<li><a href="#tools">Tools</a></li>
+</ul></li>
+</ul>
+</nav></div>
+  </div>
+  
+
+  
+
+  
+  <div class="section taxonomies">
+    <header><div class="title">category</div></header>
+    <div class="content">
+      <a href="https://bsedg.github.io/categories/getting-started">getting-started</a><a href="https://bsedg.github.io/categories/agile">agile</a><a href="https://bsedg.github.io/categories/continuous-delivery">continuous-delivery</a><a href="https://bsedg.github.io/categories/continuous-integration">continuous-integration</a>
+    </div>
+  </div>
+  
+  <div class="section taxonomies">
+    <header><div class="title">tag</div></header>
+    <div class="content">
+      <a href="https://bsedg.github.io/tags/agile">agile</a><a href="https://bsedg.github.io/tags/docker">docker</a><a href="https://bsedg.github.io/tags/golang">golang</a>
+    </div>
+  </div>
+  
+
+</aside>
+
+    </div>
+
+  </div>
+
+      </div>
+
+    <footer class="site">
+      <p>Copyright (c) 2017, Brandon Sedgwick.</p>
+      <p>Powered by <a href="http://gohugo.io" target="_blank" rel="nofollow">Hugo</a>, Theme <a href="https://github.com/dim0627/hugo_theme_robust" target="_blank" rel="nofollow">robust</a> designed by <a href="http://yet.unresolved.xyz" target="_blank" rel="nofollow">Daisuke Tsuji</a></p>
+    </footer>
+
+    <script src="//code.jquery.com/jquery-2.1.3.min.js"></script>
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.4/highlight.min.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+
+    
+
+  </body>
+</html>
+
+</div>
