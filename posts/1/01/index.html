@@ -44,8 +44,8 @@
         <meta itemprop="mainEntityOfPage"  itemType="https://schema.org/WebPage" content="https://bsedg.github.io/"/>
         <meta itemprop="dateModified" content="0001-01-01T00:00:00&#43;00:00">
         <meta itemprop="headline" content="">
-        <meta itemprop="description" content="&mdash;date: &ldquo;2013-04-13T11:27:27-04:00&rdquo;title: &ldquo;&ldquo;tags: [ &ldquo;&rdquo; ]topics: [ &ldquo;&rdquo; ]&mdash;
-Travis CI Overview Travis CI is a hosted build platform that allows for quick, simple build pipelines setup for a github project. With a public open source project, using this service is free. If you have private repositories, there are paid plans. In order to get started, you create an account at https://travis-ci.org. Once you create your account, you can setup your first project using Travis CI.">
+        <meta itemprop="description" content="&mdash;date: &ldquo;2017-06-21T11:27:27-04:00&rdquo;title: &ldquo;&ldquo;description: &ldquo;&ldquo;tags: [ &ldquo;&rdquo; ]topics: [ &ldquo;continuous-integration&rdquo; ]&mdash;
+Continuous Integration and Continuous Delivery: Walkthroughs Overview From Rhonabwy.com, they list 6 rules for setting up continuous integration systems. 1. Keep all the logic for building your code in scripts in your code repositories/source control.2. Gate merging code on the results of tests, and mercilessly hunt down and resolve unstable tests.3. Speed of your gates will directly impact developer velocity and productivity, keep it lean and be consistent with mocks or dummies in your testing code.">
         <meta itemprop="url" content="https://bsedg.github.io/posts/1/01/">
         <div itemprop="image" itemscope itemtype="https://schema.org/ImageObject">
           <meta itemprop="url" content="https://bsedg.github.io/images/default.jpg" />
@@ -75,37 +75,42 @@ Travis CI Overview Travis CI is a hosted build platform that allows for quick, s
         <div class="article-body" itemprop="articleBody">
           
 
-<p>&mdash;date:        &ldquo;2013-04-13T11:27:27-04:00&rdquo;title:       &ldquo;&ldquo;tags:        [ &ldquo;&rdquo; ]topics:      [ &ldquo;&rdquo; ]&mdash;</p>
+<p>&mdash;date:        &ldquo;2017-06-21T11:27:27-04:00&rdquo;title:       &ldquo;&ldquo;description: &ldquo;&ldquo;tags:        [ &ldquo;&rdquo; ]topics:      [ &ldquo;continuous-integration&rdquo; ]&mdash;</p>
 
-<h1 id="travis-ci">Travis CI</h1>
+<h1 id="continuous-integration-and-continuous-delivery-walkthroughs">Continuous Integration and Continuous Delivery: Walkthroughs</h1>
 
 <h2 id="overview">Overview</h2>
 
-<p>Travis CI is a hosted build platform that allows for quick, simple build pipelines setup for a github project. With a public open source project, using this service is free. If you have private repositories, there are paid plans.
-In order to get started, you create an account at <a href="https://travis-ci.org">https://travis-ci.org</a>. Once you create your account, you can setup your first project using Travis CI. Follow along with their up to date getting started page, <a href="https://travis-ci.org/getting_started">https://travis-ci.org/getting_started</a>.
-1. Go to your travis-ci profile page, <a href="https://travis-ci.org/profile/">https://travis-ci.org/profile/</a><username>.2. Add a <code>.travis.yml</code> file to the root of your repository. For the purposes of the example, we can use the Node.js build documentation at <a href="https://docs.travis-ci.com/user/languages/javascript-with-nodejs/.3">https://docs.travis-ci.com/user/languages/javascript-with-nodejs/.3</a>. Push some code to your repository to test out your build.</p>
+<p>From Rhonabwy.com, they list 6 rules for setting up continuous integration systems.
+1. Keep all the logic for building your code in scripts in your code repositories/source control.2. Gate merging code on the results of tests, and mercilessly hunt down and resolve unstable tests.3. Speed of your gates will directly impact developer velocity and productivity, keep it lean and be consistent with mocks or dummies in your testing code.4. Make sure all the developers can reproduce what gets run in the CI system by themselves.5. Cascade your builds and tests, driving full integration tests with CI systems.6. Develop, trend, and review benchmarks about your product from your CI systems.
+&gt; 2. Gate merging code on the results of tests, and mercilessly hunt down and resolve unstable tests.
+Unit tests should mock out any backing service including external APIs.Instead of actually using a backing service like a database or message queue, use mocking frameworks or code interface to keep unit tests concise and quick.Since initial testing should be happening on all code changes (commits, checkins, etc.), these tests should be concise and quick not overloading the test infrastructure &ndash; or even time to get build status.
+&gt; 3. Speed of your gates will directly impact developer velocity and productivity, keep it lean and be consistent with mocks or dummies in your testing code.
+Keep the continuous integration pipeline as smooth as possible, adding security, approvals, gates accordingly.
+&gt; As a general rule, most developers hate to document anything, but relish learning new tricks.
+^ just an interesting quote
+&gt; 4. Make sure all the developers can reproduce what gets run in the CI system by themselves.
+Docker solves this very easily.Having all build and test scripts part of the repo helps as well.
+&gt; 5. Cascade your builds and tests, driving full integration tests with CI systems.</p>
 
-<h2 id="example-walkthrough">Example Walkthrough</h2>
+<h2 id="walkthroughs">Walkthroughs</h2>
 
-<h2 id="do-it-yourself">Do It Yourself</h2>
+<p>We will be looking at a simple Node.js API, <a href="https://github.com/bsedg/events-api">https://github.com/bsedg/events-api</a>. In this project, we generated the javascript code from a Swagger yaml file, <a href="https://github.com/bsedg/events-api/blob/master/config/swagger.yaml">https://github.com/bsedg/events-api/blob/master/config/swagger.yaml</a>.</p>
 
-<p>First, setup your git repository.
-1. Create repository in github - Check the option for <code>Initialize this repository with a README</code> - Add <code>.gitignore</code> for Node2. Follow the instructions to clone your project locally.
-Then, setup your local development and initialize the project.
-1. Go to <a href="http://editor.swagger.io">http://editor.swagger.io</a> and create your own API spec or use one of their&rsquo;s predefined for you (File -&gt; Open Example&hellip;). Download the yaml file via File -&gt; Download YAML.2. In your project folder you created for the git repository, move the <code>swagger.yaml</code> file you downloaded to that folder.3. Run <code>yo swaggerize</code> and answer the prompted inputs. - I used Express for the web framework4. Build and run your code to test to make sure it works&hellip;
-```bash# will install dependencies to the ./node_modules foldernpm install</p>
+<h3 id="how-i-created-my-project">How I created my project</h3>
 
-<h1 id="will-start-the-server-locally-to-listen-on-a-port-8000-npm-start">will start the server locally to listen on a port 8000?npm start</h1>
+<p>Assuming Node is already installed (see here if not), here were steps after I created the swagger.yaml file.
+```bash# Install dependenciesnpm install -g yonpm install -g generator-swaggerize</p>
 
-<h1 id="send-request-to-an-endpoint-you-defined-if-you-have-a-version-be-sure-to-add-that-to-the-path-i-e-v1-endpoint-curl-i-http-127-0-0-1-8000-endpoint">send request to an endpoint you defined# if you have a version, be sure to add that to the path:#  i.e. /v1/<endpoint>curl -i <a href="http://127.0.0.1:8000/">http://127.0.0.1:8000/</a><endpoint>```</h1>
+<h1 id="generate-code-which-will-prompt-you-for-a-couple-inputs-yo-swaggerize">Generate code, which will prompt you for a couple inputs.yo swaggerize```</h1>
 
-<h2 id="conclusion">Conclusion</h2>
+<p>See <a href="https://github.com/krakenjs/generator-swaggerize">https://github.com/krakenjs/generator-swaggerize</a> for more details.</p>
 
-<p>Travis CI is just one of many continuous integration platforms to use, but is trusted by many great organizations.</p>
+<h3 id="continuous-integration">Continuous Integration</h3>
 
-<h2 id="other-links">Other links</h2>
-
-<p><a href="https://github.com/dwyl/learn-travis">https://github.com/dwyl/learn-travis</a></p>
+<ol>
+<li>Travis-CI <a href="https://travis-ci.org/">travis-ci.org</a> | [post]()2. Codeship <a href="https://codeship.com/">codeship.com</a> | [post]()3. CircleCI <a href="https://circleci.com/">circleci.com</a> | [post]()4. Wercker <a href="https://www.wercker.com/">wercker.com</a> | [post]()5. Shippable <a href="https://www.shippable.com/">shippable.com</a> | [post]()</li>
+</ol>
 
         </div>
 
@@ -148,17 +153,20 @@ Then, setup your local development and initialize the project.
     <header><div class="title">TableOfContents</div></header>
     <div class="list-default"><nav id="TableOfContents">
 <ul>
-<li><a href="#travis-ci">Travis CI</a>
+<li><a href="#continuous-integration-and-continuous-delivery-walkthroughs">Continuous Integration and Continuous Delivery: Walkthroughs</a>
 <ul>
 <li><a href="#overview">Overview</a></li>
-<li><a href="#example-walkthrough">Example Walkthrough</a></li>
-<li><a href="#do-it-yourself">Do It Yourself</a></li>
-</ul></li>
-<li><a href="#will-start-the-server-locally-to-listen-on-a-port-8000-npm-start">will start the server locally to listen on a port 8000?npm start</a></li>
-<li><a href="#send-request-to-an-endpoint-you-defined-if-you-have-a-version-be-sure-to-add-that-to-the-path-i-e-v1-endpoint-curl-i-http-127-0-0-1-8000-endpoint">send request to an endpoint you defined# if you have a version, be sure to add that to the path:#  i.e. /v1/<endpoint>curl -i <a href="http://127.0.0.1:8000/">http://127.0.0.1:8000/</a><endpoint>```</a>
+<li><a href="#walkthroughs">Walkthroughs</a>
 <ul>
-<li><a href="#conclusion">Conclusion</a></li>
-<li><a href="#other-links">Other links</a></li>
+<li><a href="#how-i-created-my-project">How I created my project</a></li>
+</ul></li>
+</ul></li>
+<li><a href="#generate-code-which-will-prompt-you-for-a-couple-inputs-yo-swaggerize">Generate code, which will prompt you for a couple inputs.yo swaggerize```</a>
+<ul>
+<li>
+<ul>
+<li><a href="#continuous-integration">Continuous Integration</a></li>
+</ul></li>
 </ul></li>
 </ul>
 </nav></div>
