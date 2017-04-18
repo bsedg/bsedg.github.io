@@ -2,6 +2,11 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://bsedg.github.io/posts/2017/04/travis-ci-walkthrough/</loc>
+    <lastmod>2017-04-17T20:09:27-04:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://bsedg.github.io/posts/2017/04/continuous-delivery-introduction/</loc>
     <lastmod>2017-04-03T20:09:27-04:00</lastmod>
   </url>
@@ -12,10 +17,6 @@
   </url>
   
   <url>
-    <loc>https://bsedg.github.io/posts/1/01/</loc>
-  </url>
-  
-  <url>
     <loc>https://bsedg.github.io/tags/agile/</loc>
     <lastmod>2017-04-03T20:09:27-04:00</lastmod>
     <priority>0</priority>
@@ -23,25 +24,25 @@
   
   <url>
     <loc>https://bsedg.github.io/categories/agile/</loc>
-    <lastmod>2017-04-03T20:09:27-04:00</lastmod>
+    <lastmod>2017-04-17T20:09:27-04:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>https://bsedg.github.io/categories/</loc>
-    <lastmod>2017-04-03T20:09:27-04:00</lastmod>
+    <lastmod>2017-04-17T20:09:27-04:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>https://bsedg.github.io/categories/continuous-delivery/</loc>
-    <lastmod>2017-04-03T20:09:27-04:00</lastmod>
+    <lastmod>2017-04-17T20:09:27-04:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>https://bsedg.github.io/categories/continuous-integration/</loc>
-    <lastmod>2017-04-03T20:09:27-04:00</lastmod>
+    <lastmod>2017-04-17T20:09:27-04:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -64,14 +65,26 @@
   </url>
   
   <url>
+    <loc>https://bsedg.github.io/tags/nodejs/</loc>
+    <lastmod>2017-04-17T20:09:27-04:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>https://bsedg.github.io/posts/</loc>
-    <lastmod>2017-04-03T20:09:27-04:00</lastmod>
+    <lastmod>2017-04-17T20:09:27-04:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>https://bsedg.github.io/</loc>
-    <lastmod>2017-04-03T20:09:27-04:00</lastmod>
+    <lastmod>2017-04-17T20:09:27-04:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://bsedg.github.io/tags/swagger/</loc>
+    <lastmod>2017-04-17T20:09:27-04:00</lastmod>
     <priority>0</priority>
   </url>
   
