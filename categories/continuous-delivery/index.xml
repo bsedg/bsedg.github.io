@@ -1,18 +1,38 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Sedgwick Tech Blog </title>
-    <link>https://bsedg.github.io/categories/continuous-delivery/</link>
+    <title>Continuous Delivery on Sedgwick Tech Blog</title>
+    <link>https://bsedg.github.io/blog/categories/continuous-delivery/</link>
+    <description>Recent content in Continuous Delivery on Sedgwick Tech Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <author>Brandon Sedgwick</author>
-    <rights>(C) 2017</rights>
-    <updated>2017-04-17 20:09:27 -0400 -0400</updated>
-
+    <copyright>Copyright (c) 2018, Brandon Sedgwick.</copyright>
+    <lastBuildDate>Mon, 17 Apr 2017 20:09:27 -0400</lastBuildDate>
     
+	<atom:link href="https://bsedg.github.io/blog/categories/continuous-delivery/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Travis CI Walkthrough</title>
+      <link>https://bsedg.github.io/blog/posts/2017/04/travis-ci-walkthrough/</link>
+      <pubDate>Mon, 17 Apr 2017 20:09:27 -0400</pubDate>
       
+      <guid>https://bsedg.github.io/blog/posts/2017/04/travis-ci-walkthrough/</guid>
+      <description>Travis CI Overview Travis CI is a hosted build platform that allows for quick, simple build pipelines setup for a github project. With a public open source project, using this service is free. If you have private repositories, there are paid plans. In order to get started, you create an account at https://travis-ci.org. Once you create your account, you can setup your first project using Travis CI. Follow along with their up to date getting started page, https://travis-ci.</description>
+    </item>
     
+    <item>
+      <title>Continuous Delivery Introduction</title>
+      <link>https://bsedg.github.io/blog/posts/2017/04/continuous-delivery-introduction/</link>
+      <pubDate>Mon, 03 Apr 2017 20:09:27 -0400</pubDate>
       
-    
+      <guid>https://bsedg.github.io/blog/posts/2017/04/continuous-delivery-introduction/</guid>
+      <description>&lt;h1 id=&#34;overview&#34;&gt;Overview&lt;/h1&gt;
 
+&lt;p&gt;Continuous delivery along with continuous integration supports the key fundamentals of software development using the agile methodology.&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
   </channel>
 </rss>

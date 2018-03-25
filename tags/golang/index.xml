@@ -1,16 +1,31 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Sedgwick Tech Blog </title>
-    <link>https://bsedg.github.io/tags/golang/</link>
+    <title>Golang on Sedgwick Tech Blog</title>
+    <link>https://bsedg.github.io/blog/tags/golang/</link>
+    <description>Recent content in Golang on Sedgwick Tech Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <author>Brandon Sedgwick</author>
-    <rights>(C) 2017</rights>
-    <updated>2017-04-03 19:13:42 -0400 -0400</updated>
-
+    <copyright>Copyright (c) 2018, Brandon Sedgwick.</copyright>
+    <lastBuildDate>Mon, 03 Apr 2017 19:13:42 -0400</lastBuildDate>
     
+	<atom:link href="https://bsedg.github.io/blog/tags/golang/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>hello world</title>
+      <link>https://bsedg.github.io/blog/posts/2017/04/hello-world/</link>
+      <pubDate>Mon, 03 Apr 2017 19:13:42 -0400</pubDate>
       
-    
+      <guid>https://bsedg.github.io/blog/posts/2017/04/hello-world/</guid>
+      <description>&lt;h1 id=&#34;introduction&#34;&gt;Introduction&lt;/h1&gt;
 
+&lt;p&gt;Hello, world!&lt;/p&gt;
+
+&lt;p&gt;Any step to a new language or technology typically involves a &amp;lsquo;Hello, World&amp;rsquo; application&amp;hellip; here&amp;rsquo;s mine.&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
   </channel>
 </rss>

@@ -1,22 +1,52 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Sedgwick Tech Blog </title>
-    <link>https://bsedg.github.io/categories/</link>
+    <title>Categories on Sedgwick Tech Blog</title>
+    <link>https://bsedg.github.io/blog/categories/</link>
+    <description>Recent content in Categories on Sedgwick Tech Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <author>Brandon Sedgwick</author>
-    <rights>(C) 2017</rights>
-    <updated>2017-04-17 20:09:27 -0400 -0400</updated>
-
+    <copyright>Copyright (c) 2018, Brandon Sedgwick.</copyright>
+    <lastBuildDate>Mon, 17 Apr 2017 20:09:27 -0400</lastBuildDate>
     
+	<atom:link href="https://bsedg.github.io/blog/categories/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Agile</title>
+      <link>https://bsedg.github.io/blog/categories/agile/</link>
+      <pubDate>Mon, 17 Apr 2017 20:09:27 -0400</pubDate>
       
+      <guid>https://bsedg.github.io/blog/categories/agile/</guid>
+      <description></description>
+    </item>
     
+    <item>
+      <title>Continuous Delivery</title>
+      <link>https://bsedg.github.io/blog/categories/continuous-delivery/</link>
+      <pubDate>Mon, 17 Apr 2017 20:09:27 -0400</pubDate>
       
+      <guid>https://bsedg.github.io/blog/categories/continuous-delivery/</guid>
+      <description></description>
+    </item>
     
+    <item>
+      <title>Continuous Integration</title>
+      <link>https://bsedg.github.io/blog/categories/continuous-integration/</link>
+      <pubDate>Mon, 17 Apr 2017 20:09:27 -0400</pubDate>
       
+      <guid>https://bsedg.github.io/blog/categories/continuous-integration/</guid>
+      <description></description>
+    </item>
     
+    <item>
+      <title>Getting Started</title>
+      <link>https://bsedg.github.io/blog/categories/getting-started/</link>
+      <pubDate>Mon, 03 Apr 2017 20:09:27 -0400</pubDate>
       
+      <guid>https://bsedg.github.io/blog/categories/getting-started/</guid>
+      <description></description>
+    </item>
     
-
   </channel>
 </rss>

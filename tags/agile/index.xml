@@ -1,16 +1,29 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Sedgwick Tech Blog </title>
-    <link>https://bsedg.github.io/tags/agile/</link>
+    <title>Agile on Sedgwick Tech Blog</title>
+    <link>https://bsedg.github.io/blog/tags/agile/</link>
+    <description>Recent content in Agile on Sedgwick Tech Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <author>Brandon Sedgwick</author>
-    <rights>(C) 2017</rights>
-    <updated>2017-04-03 20:09:27 -0400 -0400</updated>
-
+    <copyright>Copyright (c) 2018, Brandon Sedgwick.</copyright>
+    <lastBuildDate>Mon, 03 Apr 2017 20:09:27 -0400</lastBuildDate>
     
+	<atom:link href="https://bsedg.github.io/blog/tags/agile/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Continuous Delivery Introduction</title>
+      <link>https://bsedg.github.io/blog/posts/2017/04/continuous-delivery-introduction/</link>
+      <pubDate>Mon, 03 Apr 2017 20:09:27 -0400</pubDate>
       
-    
+      <guid>https://bsedg.github.io/blog/posts/2017/04/continuous-delivery-introduction/</guid>
+      <description>&lt;h1 id=&#34;overview&#34;&gt;Overview&lt;/h1&gt;
 
+&lt;p&gt;Continuous delivery along with continuous integration supports the key fundamentals of software development using the agile methodology.&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
   </channel>
 </rss>
